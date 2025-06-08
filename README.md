@@ -7,6 +7,7 @@ Sistema de gestión veterinaria basado en microservicios, diseñado para adminis
 El proyecto está organizado en varios microservicios independientes que trabajan en conjunto:
 
 - **auth-service**: Servicio de autenticación y autorización
+- **pets-service**: Servicio de gestión de mascotas
 - Otros servicios (en desarrollo)
 
 ### Tecnologías Utilizadas
@@ -24,6 +25,7 @@ El proyecto está organizado en varios microservicios independientes que trabaja
 ### Configuración de Base de Datos
 1. El proyecto utiliza las siguientes bases de datos:
    - `veterinaria_auth`: Base de datos para la autenticación de usuarios (UTF8MB4, collation utf8mb4_unicode_ci)
+   - `veterinaria_pets`: Base de datos para la gestión de mascotas (UTF8MB4, collation utf8mb4_unicode_ci)
 
 ## Servicios Disponibles
 
@@ -36,6 +38,14 @@ Maneja la autenticación y autorización de usuarios dentro del sistema.
 - Gestión de permisos
 - Tokens de autenticación
 
+### Servicio de Mascotas (pets-service)
+Gestiona la información relacionada con las mascotas registradas en el sistema.
+
+#### Funcionalidades:
+- Registro de mascotas
+- Historial médico
+- Información de propietarios
+- Recordatorios de citas y vacunas
 ## Instalación y Configuración
 
 1. Clonar el repositorio:
@@ -46,6 +56,7 @@ Maneja la autenticación y autorización de usuarios dentro del sistema.
 2. Configurar las bases de datos:
    ```sql
    CREATE DATABASE veterinaria_auth CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   CREATE DATABASE veterinaria_pets CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    ```
 
 3. Configurar cada servicio según las instrucciones específicas en sus respectivos directorios.
@@ -58,7 +69,7 @@ Maneja la autenticación y autorización de usuarios dentro del sistema.
 3. Documentar adecuadamente las APIs y el código.
 
 ## Estado del Proyecto
-En desarrollo inicial. Actualmente implementando el servicio de autenticación.
+En desarrollo inicial. Actualmente implementando los servicios de autenticación y de mascotas.
 
 ## Contacto
 [Información de contacto del equipo de desarrollo]
